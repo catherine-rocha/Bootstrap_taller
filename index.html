@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Barra de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6C757D">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-2" href="#">Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <!--Search-->
+                <form class="d-flex ms-lg-auto order-md-first order-lg-last" role="search">
+                    <input class="form-control me-2" type="search" id="searchInput" name="search" placeholder="Search"
+                        aria-label="Search">
+                </form>
+                <!--Links de la barra de navegación-->
+
+                <div class="navbar-nav me-auto">
+                    <a class="nav-link mx-5" href="#">Features</a>
+                    <a class="nav-link mx-5" href="#">Pricing</a>
+                    <a class="nav-link disabled mx-5" aria-disabled="true">Disabled</a>
+                    <a class="nav-link mx-5 d-md-block d-lg-none" data-bs-toggle="collapse" data-bs-target="#acordeon"
+                        aria-expanded="false" aria-controls="acordeon">Opciones</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Título-->
+
+    <div class="centrado d-none d-lg-block">
+        <h3>Bootstrap</h3>
+
+        <!-- Carrusel de textos aleatorios-->
+        <div id="textCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>¿Qué clases utilizé para hacer esta página?</p>
+                </div>
+                <div class="carousel-item">
+                    <p>¿Qué función cumple cada una?</p>
+                </div>
+                <div class="carousel-item">
+                    <p>Haciendo uso del sistema de grillas de Bootstrap...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Acordeón de opciones -->
+        <div class="accordion collapse col-lg-3  d-lg-block" id="acordeon">
+            <div class="accordion-item rounded p-3">
+                <p class="accordion-header" id="headingOne">
+                    <a class="accordion-link" href="#">Opción 1</a>
+                </p>
+            </div>
+            <div class="accordion-item rounded p-3">
+                <p class="accordion-header" id="headingTwo">
+                    <a class="accordion-link" href="#">Opción 2</a>
+                </p>
+            </div>
+            <div class="accordion-item rounded p-3">
+                <p class="accordion-header" id="headingThree">
+                    <a class="accordion-link" href="#">Opción 3</a>
+                </p>
+            </div>
+            <div class="accordion-item rounded p-3">
+                <p class="accordion-header" id="headingFour">
+                    <a class="accordion-link" href="#">Opción 4</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Texto en párrafos -->
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <h6>Clases usadas para la Barra de Navegación</h6>
+                    <p> <strong>navbar</strong>: Define la barra de navegación.
+                        <strong>navbar-expand-lg</strong>:controla cuándo el contenido de la barra se colapsa y cuándo
+                        se expande automáticamente.
+                        Antes del tamaño lg (large): la barra de navegación estará colapsada, es decir, aparecerá el
+                        ícono de "hamburguesa" para abrir el menú.
+                        A partir del tamaño lg en adelante: la barra de navegación se expande y muestra todos los
+                        enlaces sin colapsar, ocupando su lugar completo en la pantalla.
+                        <strong>navbar-dark</strong>: le aplica estilos oscuros, haciendo que el
+                        texto y los íconos sean más visibles.
+                        <strong>bg-#6C757D</strong>: Color de fondo personalizado.
+
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <p> Todos los links y el buscador están dentro de un div con la clase
+                        <strong>container-fluid</strong>:asegura que
+                        los elementos dentro de la barra de navegación se distribuyan uniformemente a lo largo del
+                        viewport, adaptándose a pantallas más pequeñas o
+                        grandes sin dejar márgenes laterales.<br>
+
+                        <h6>Botón de menú en tamaño MD y SM</h6>
+                        <strong>navbar-toggler</strong>: da clase al botón que se usa para abrir/cerrar el menú que
+                        aparece
+                        en pantallas pequeñas cuando la barra de navegación está colapsada.
+                        <strong>data-bs-toggle="collapse"</strong>: es un atributo de Bootstrap que indica que este
+                        botón controlará
+                        la funcionalidad de "colapsar" (expandir o contraer) un 
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <p>menú o un panel.
+                        <strong>data-bs-target="#navbarNavAltMarkup"</strong>: este atributo indica qué elemento será
+                        colapsado o expandido. En este caso, el div con el
+                        id="navbarNavAltMarkup" (que contiene los enlaces de navegación). Esto hace que al hacer clic en
+                        el botón, el menú se despliegue o se oculte.
+                        <strong> aria-controls="navbarNavAltMarkup"</strong>: atributo de accesibilidad que indica que
+                        el botón controla
+                        el menú con el ID navbarNavAltMarkup.
+                        <strong>aria-expanded="false"</strong> : indica que el menú está colapsado inicialmente (no
+                        expandido). Este valor cambia
+                        dinámicamente a true cuando el menú está desplegado.
+                        <strong>aria-label="Toggle navigation"</strong>: es un atributo crucial para la accesibilidad.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <h6>Ícono de menú</h6>
+                    <p><strong>span class="navbar-toggler-icon"</strong> : es un elemento visual que representa el
+                        ícono de hamburguesa (las tres líneas paralelas)
+                        que se utiliza comúnmente para indicar que hay un menú colapsado. <br>
+                        Los links que en pantallas MD y SM forman parte del menú, asi como el buscador y el link de
+                        "Opciones", se encuentran dentro
+                        de un div con clase
+                        <strong>collapse navbar-collapse</strong>: Colapsa el contenido de la barra de navegación en
+                        tamaños pequeños y lo expande en tamaños LG.
+                        <strong>navbar-nav me-auto</strong>: Aplica margen a la derecha de los enlaces en la barra de
+                        navegación (esto permite que el formulario de búsqueda esté a la derecha en pantallas grandes).
+                    </p>
+        
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <h6>Campo de busqueda</h6>
+                    <p> <strong>d-flex</strong>: Utilizado para alinear correctamente el campo de búsqueda dentro de la
+                        barra de navegación.
+                        <strong>ms-lg-auto</strong>: Aplica un margen a la izquierda automático solo en pantallas LG
+                        para empujar el formulario hacia la derecha.
+                        <strong>order-md-first order-lg-last</strong>: Cambia el orden del campo de búsqueda:
+                        En pantallas MD y SM, se posiciona al inicio del menú (primero).
+                        En pantallas LG, se coloca al final (último) para mantenerse a la derecha.
+                        <strong>form-control</strong>: Estiliza el campo de búsqueda, haciéndolo visualmente acorde con
+                        el resto de la barra de navegación.
+                        <strong>me-2</strong>: Aplica margen a la derecha del campo de búsqueda para darle espacio con
+                        otros elementos.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <h6>Enlaces del menú</h6>
+                    <p> <strong>nav-link</strong>: estiliza los enlaces de navegación.
+                       <strong>mx-5</strong>: Aplica márgenes horizontales entre los enlaces.
+                        <strong>d-md-block d-lg-none</strong>: El enlace "Opciones" es visible solo en pantallas
+                        MD y SM. Se oculta en pantallas LG.
+                        <strong>disabled</strong>: Desactiva el enlace "Disabled", lo hace no clickeable y aplica un
+                        estilo visual de desactivado.
+                    </p>
+                    <h6> Título y Textos Aleatorios</h6>
+                    <p><strong>class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"</strong>: Define
+                        el carrusel con cambios cada 2 segundos.
+                        <strong>d-none d-lg-block</strong>: Oculta el título "Bootstrap" y el carrusel de textos
+                        aleatorios en pantallas SM y MD. Solo es visible en pantallas LG.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <h6>Sistema de Grid</h6>
+                    <p>
+                        <strong>container</strong> : Contenedor principal que encapsula los párrafos y el acordeón.
+                        <strong> row</strong>: Clase que define una fila en el sistema de cuadrícula de Bootstrap.
+                        <strong> col-lg-9 </strong>: Los párrafos ocupan 9 columnas en pantallas grandes (LG), dejando 3
+                        columnas para el acordeón.
+                    </p>
+                    <h6>Acordeón de Opciones</h6>
+                    <p> <strong>accordion</strong>: Define el contenedor como un acordeón, que puede expandirse y
+                        colapsarse.
+                        <strong>collapse</strong>: Inicialmente colapsa el acordeón.
+                        <strong>col-lg-3</strong>: El acordeón ocupa 3 columnas del sistema de cuadrícula en pantallas
+                        grandes (LG).
+                        <strong>d-lg-block</strong>: Muestra el acordeón solo en pantallas grandes (LG).
+                        <strong>rounded</strong>: Aplica bordes redondeados a cada opción del acordeón.
+                        <strong>p-3</strong>: Aplica padding (espaciado interno) a cada opción del acordeón.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 fondo mb-3">
+                    <h6>Párrafos</h6>
+
+                    <strong>col-12 col-md-6 col-lg-4</strong> : Cada párrafo ocupa:
+                    12 columnas en pantallas pequeñas (SM), tomando todo el ancho.
+                    6 columnas en pantallas medianas (MD), mostrando dos columnas de párrafos.
+                    4 columnas en pantallas grandes (LG), mostrando tres columnas de párrafos.
+                    <strong>fondo</strong> : Clase personalizada que puedes usar para aplicar un fondo a los párrafos.
+                    <strong>mb-3</strong> : Aplica un margen inferior a cada párrafo para crear espacio entre ellos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
